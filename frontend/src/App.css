@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Main Container */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Headings */
+
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #0f172a;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  margin-top: 45px;
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-size: 24px;
+}
+
+/* =========================
+   JOB FORM
+========================= */
+
+.job-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  background: #ffffff;
+  padding: 24px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+.job-form input,
+.job-form select {
+  flex: 1;
+  min-width: 150px;
+
+  padding: 11px 13px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #334155;
+
+  font-size: 14px;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-form input::placeholder {
+  color: #94a3b8;
+}
+
+.job-form input:focus,
+.job-form select:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Add / Update Button */
+
+.job-form button {
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.job-form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.job-form button:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   JOB CARDS
+========================= */
+
+.jobs-container {
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.job-card {
+  background: #ffffff;
+
+  padding: 22px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.09);
+}
+
+/* Job Title */
+
+.job-card h3 {
+  margin: 0 0 16px;
+
+  color: #0f172a;
+
+  font-size: 19px;
+}
+
+/* Job Information */
+
+.job-card p {
+  margin: 9px 0;
+
+  color: #475569;
+
+  font-size: 14px;
+}
+
+.job-card p strong {
+  color: #1e293b;
+}
+
+/* =========================
+   JOB BUTTONS
+========================= */
+
+.job-card button {
+  margin-top: 16px;
+  margin-right: 8px;
+
+  padding: 8px 15px;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+/* Edit Button */
+
+.job-card button:last-child {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.job-card button:last-child:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Delete Button */
+
+.job-card button:first-of-type {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.job-card button:first-of-type:hover {
+  background: #fecaca;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status-badge {
+  display: inline-block;
+
+  margin-left: 8px;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Saved */
+
+.status-badge.saved {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+/* Applied */
+
+.status-badge.applied {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* Interview */
+
+.status-badge.interview {
+  background: #fef3c7;
+  color: #a16207;
+}
+
+/* Rejected */
+
+.status-badge.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Selected */
+
+.status-badge.selected {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .jobs-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 94%;
+    padding: 25px 0;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .job-form {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .job-form input,
+  .job-form select,
+  .job-form button {
+    width: 100%;
+  }
+
+  .job-card {
+    padding: 18px;
+  }
+}
