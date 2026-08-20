@@ -306,3 +306,21 @@ h2 {
     padding: 18px;
   }
 }
+
+.search-input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
